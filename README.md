@@ -14,7 +14,7 @@ It allows you to take down notes and keep track of them.
 
 ### Tips and tricks
 * You can add and deleted using the add("+") and Delete key on your keyboard.
-* Tick keep logged in so that you don't constant sign in.
+* Tick keep logged in so that you don't constantly sign in.
 
 ## Enjoy. 🙂
 
