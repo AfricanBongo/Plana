@@ -11,7 +11,7 @@ public class AccountController {
     @FXML private TextField passwordField;
     @FXML private Button revealPasswordButton;
 
-    /// Display the account info the dialog pane
+    /// Display the account info to the dialog pane
     @FXML
     public void initialize() {
         usernameTextField.setText( UserData.getInstance().getCurrentUser().getUsername());
