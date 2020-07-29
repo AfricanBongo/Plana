@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<DialogPane prefHeight="216.0" prefWidth="600.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plana.RegisterController">
+   <content>
+      <VBox prefHeight="401.0" prefWidth="600.0" spacing="10.0">
+         <children>
+            <TextField fx:id="usernameTextField" alignment="CENTER" promptText="Username" />
+            <PasswordField fx:id="passwordField" alignment="CENTER" prefHeight="26.0" prefWidth="548.0" promptText="New password" />
+            <Label fx:id="passwordMatchLabel" alignment="CENTER" text="Passwords don't match" textFill="skyblue">
+               <VBox.margin>
+                  <Insets left="215.0" />
+               </VBox.margin>
+            </Label>
+            <CheckBox fx:id="signInCheckBox" mnemonicParsing="false" text="Keep logged in">
+               <font>
+                  <Font name="Noto Sans JP Regular" size="15.0" />
+               </font></CheckBox>
+         </children>
+      </VBox>
+   </content>
+</DialogPane>

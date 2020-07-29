@@ -1,0 +1,15 @@
+.split-pane > .split-pane-divider {
+    -fx-padding: 0 0.05em 0 0.05em;
+}
+
+.menu-button {
+    -fx-background-color: deepskyblue;
+    -fx-background-radius: 15;
+    -fx-font-family: Rowdies;
+    -fx-font-size: 15;
+}
+
+.menu-button:hover {
+    -fx-background-color: white;
+    -fx-text-fill: deepskyblue;
+}

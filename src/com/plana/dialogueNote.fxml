@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<DialogPane fx:id="dpNote" style="-fx-background-color: lightskyblue;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plana.NewNoteDialogController">
+
+    <content>
+        <GridPane hgap="10" vgap="10">
+            <TextField fx:id="txtBrief" promptText="New note brief..." GridPane.columnSpan="2" GridPane.rowIndex="0" />
+            <TextArea fx:id="txtAreaNote" promptText="Write details..." style="-fx-background-radius: 10" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+            <Label text="Date to be done: " GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <DatePicker fx:id="dpToBeDone" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+        </GridPane>
+    </content>
+</DialogPane>

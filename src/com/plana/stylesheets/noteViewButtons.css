@@ -1,0 +1,12 @@
+.button {
+    -fx-background-color: deepskyblue;
+    -fx-background-radius: 15;
+    -fx-font-family: Rowdies;
+    -fx-text-fill: white;
+    -fx-text-alignment: center;
+}
+
+.button:hover {
+    -fx-background-color: white;
+    -fx-text-fill: deepskyblue;
+}

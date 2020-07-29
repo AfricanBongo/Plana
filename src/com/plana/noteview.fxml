@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="mainBorderPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plana.NoteViewController">
+
+<!--    Left pane with add button, sort buttons and list view-->
+    <left>
+
+        <StackPane>
+            <ListView fx:id="noteListView" onKeyPressed="#handleKeyPressed" style="-fx-background-color: lightblue;">
+            </ListView>
+            <Button fx:id="addButton" onMouseClicked="#showDialogPane" style="-fx-background-radius: 100; -fx-background-color: transparent" stylesheets="@stylesheets/noteViewButtons.css" StackPane.alignment="BOTTOM_LEFT">
+                <tooltip><Tooltip text="Add new note" /></tooltip>
+                <graphic>
+                    <ImageView>
+                        <Image url="@icons/add.png" />
+                  <effect>
+                     <DropShadow />
+                  </effect>
+                    </ImageView>
+                </graphic>
+            </Button>
+        </StackPane>
+
+    </left>
+
+<!--    Text area for the note and labels to display dates-->
+    <center>
+        <StackPane>
+            <TextArea fx:id="detailsTextArea" VBox.vgrow="ALWAYS" />
+            <Label fx:id="datesLabel" style="-fx-background-radius: 5; -fx-background-color: white;" textFill="#455f68" StackPane.alignment="BOTTOM_CENTER">
+                <font>
+                    <Font name="Red Rose Bold" size="20" />
+                </font>
+            <StackPane.margin>
+               <Insets bottom="10.0" />
+            </StackPane.margin>
+            <effect>
+               <DropShadow blurType="GAUSSIAN" spread="0.46">
+                  <color>
+                     <Color blue="0.8026315569877625" green="0.687872588634491" red="0.3975999057292938" />
+                  </color>
+               </DropShadow>
+            </effect>
+            </Label>
+        </StackPane>
+
+    </center>
+
+   <top>
+      <SplitPane dividerPositions="0.5" style="-fx-background-color: skyblue;" stylesheets="@stylesheets/splitpane.css" BorderPane.alignment="CENTER">
+         <items>
+            <ToolBar maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="248.0" style="-fx-background-color: transparent;">
+               <items>
+                  <MenuButton mnemonicParsing="false" prefHeight="26.0" prefWidth="106.0" text="View">
+                    <items>
+                      <MenuItem fx:id="urgentMenuItem" mnemonicParsing="false" onAction="#filterList" text="Urgent Notes" />
+                      <MenuItem fx:id="allMenuItem" mnemonicParsing="false" onAction="#filterList" text="All Notes" />
+                        <MenuItem fx:id="aToZMenuItem" mnemonicParsing="false" onAction="#sortList" text="Sort A-Z" />
+                        <MenuItem fx:id="zToAMenuItem" mnemonicParsing="false" onAction="#sortList" text="Sort Z-A" />
+                    </items>
+                     <font>
+                        <Font name="Rowdies Regular" size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </MenuButton>
+               </items>
+            </ToolBar>
+            <ToolBar fx:id="noteToolBar" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: skyblue;" stylesheets="@stylesheets/noteViewButtons.css">
+               <effect>
+                  <ColorAdjust />
+               </effect>
+               <items>
+                  <MenuButton mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefWidth="135.0" text=" Account" textFill="#f5f3f3">
+                      <graphic>
+                          <ImageView fitHeight="23.0" fitWidth="23.0">
+                              <Image url="@icons/user.png" />
+                          </ImageView>
+                      </graphic>
+                    <items>
+                      <MenuItem fx:id="accountinfoMenuItem" mnemonicParsing="false" onAction="#handleAccountMenuSelection" text="Account info" />
+                        <MenuItem fx:id="deleteaccountMenuItem" mnemonicParsing="false" onAction="#handleAccountMenuSelection" text="Delete Account" />
+                      <MenuItem fx:id="signoutMenuItem" mnemonicParsing="false" onAction="#handleAccountMenuSelection" style="-fx-background-color: red; -fx-text-fill: white;" text="Sign out" />
+                    </items>
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </MenuButton>
+               </items>
+            </ToolBar>
+         </items>
+      </SplitPane>
+   </top>
+    
+</BorderPane>

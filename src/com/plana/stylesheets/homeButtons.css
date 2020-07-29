@@ -1,0 +1,19 @@
+.button {
+    -fx-background-color: black;
+    -fx-background-radius: 0;
+    -fx-font-size: 20;
+    -fx-font-family: Lobster;
+    -fx-text-fill: white;
+}
+
+.button:hover {
+    -fx-background-color: white;
+    -fx-text-fill: deepskyblue;
+    -fx-font-size: 18px;
+    -fx-border-width: 2;
+    -fx-font-size: 20;
+    -fx-font-family: Lobster;
+    -fx-border-style: solid;
+    -fx-border-color: deepskyblue;
+    -fx-border-radius: 0;
+}
