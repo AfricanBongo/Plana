@@ -3,7 +3,7 @@
 This is a simple desktop application developed using JavaFX, as my first Java and JavaFX project.
 
 It has a user friendly interface and awesome splash screen.
-The Sign In page is completely draggable and all windows of the application are not resizable
+The Sign In page is completely draggable and all windows of the application are not resizable.
 It allows you to take notes and assign them their due dates as well edit them whenever your goal changes.
 You can have multiple users of the app as it has an account feature.
 However it doesn't have an online feature yet.
