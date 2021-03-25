@@ -1,4 +1,4 @@
-# Plana
+# :notebook_with_decorative_cover: Plana
 
 ## Getting Started
 This is a simple desktop application developed using JavaFX, as my first Java and JavaFX project.
